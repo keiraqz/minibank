@@ -19,13 +19,16 @@ public class TestActivities {
 	public void testActivities(){
 		Account checking = Activities.create(1);
 		Account saving = Activities.create(2);
+		// check account type
 		assertEquals(checking.getClass().getName(), "structures.Checking");
 		assertEquals(saving.getClass().getName(), "structures.Saving");
 		
+		// add money
 		Money money = new Money(20);
 		assertTrue(Activities.depositTo(checking, money));
 		assertTrue(Activities.depositTo(saving, money));
 		
+		// withdraw money
 		Money moneyTwo = new Money(10);
 		assertTrue(Activities.withdrawFrom(checking, moneyTwo));
 		assertTrue(Activities.withdrawFrom(saving, moneyTwo));
@@ -37,6 +40,7 @@ public class TestActivities {
 		assertFalse(Activities.withdrawFrom(checking, moneyThree));
 		assertFalse(Activities.withdrawFrom(saving, moneyThree));
 
+		// transfer money
 		assertTrue(Activities.transfer(checking, saving, moneyTwo));
 		// transfer more than checking account has
 		assertFalse(Activities.transfer(checking, saving, moneyTwo));

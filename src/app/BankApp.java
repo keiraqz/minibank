@@ -3,9 +3,9 @@ package app;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
 
 import structures.Account;
+import structures.AccountCollection;
 import structures.Checking;
 import structures.Saving;
 
@@ -20,8 +20,8 @@ import structures.Saving;
  */
 public class BankApp {
 	
-	/** HashMap that contains all accounts that have been created.*/
-	public static HashMap<Integer, Account> currentAccounts;
+	/** AccountCollection that contains all accounts that have been created.*/
+	public static AccountCollection currentAccounts;
 
 	public static void main(String args[]) {
 		BankApp app = new BankApp();
@@ -29,7 +29,7 @@ public class BankApp {
 	}
 
 	private void start() {
-		currentAccounts = new HashMap<Integer, Account>();
+		currentAccounts = new AccountCollection();
 		int currentId = 0;
 		int userCommand = 0;
 		

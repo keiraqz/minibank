@@ -104,7 +104,7 @@ class depositMoney implements Command {
 				int amountInt = Integer.parseInt(input[1]); // get the deposit amount
 				Money amount = new Money(amountInt); // put the amount in Money object
 				System.out.print("Before Deposit: ");
-				BankApp.currentAccounts.get(accountID).print(); // print account into
+				BankApp.currentAccounts.get(accountID).print(); // print account info
 				Activities.depositTo(BankApp.currentAccounts.get(accountID),
 						amount); // make deposit
 				System.out.print("After Deposit: ");
