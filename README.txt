@@ -1,3 +1,5 @@
+Welcome to Keira's MiniBank!
+
 Test cases are under package test.
 
 To run the application interactively in terminal:
