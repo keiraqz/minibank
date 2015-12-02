@@ -5,7 +5,7 @@
 This is Java sample code of a banking app. Test cases are under package test.
 
 To run the application interactively in terminal:
-java -jar MiniBank.jar
+```java -jar MiniBank.jar```
 
 ###Options:
 **1. Create an account**
